@@ -1,0 +1,47 @@
+<form class="offer-form mt-3" [formGroup]="offerForm"  (ngSubmit)="offerSubmit()">
+  <h3>Post new</h3>
+  <div class="row col-sm-10 col-md-10 col-lg-5">
+    <div class="form-group mb-4">
+      <label class="form-label" for="title">Title</label>
+      <input id="title" class="form-control" formControlName="title" placeholder="Title" maxlength="100"/>
+      <span class="text-danger"
+            *ngIf="fControls['title'].hasError('required') && (fControls['title'].dirty
+          || fControls['title'].touched)">the field is required</span>
+    </div>
+    <div class="form-group mb-4">
+      <label class="form-label" for="picture-url">Picture URL</label>
+      <input id="picture-url" class="form-control" formControlName="pictureUrl" maxlength="100"
+             placeholder="offers/iphone.jpg"/>
+      <span class="text-danger"
+            *ngIf="fControls['pictureUrl'].hasError('required') && (fControls['pictureUrl'].dirty
+          || fControls['pictureUrl'].touched)">the field is required</span>
+    </div>
+    <div class="form-group mb-4">
+      <label class="form-label" for="description">Description</label>
+      <textarea id="description" class="form-control" formControlName="description" maxlength="2000"
+                placeholder="Description" rows="5"></textarea>
+      <span class="text-danger"
+            *ngIf="fControls['description'].hasError('required') && (fControls['description'].dirty
+          || fControls['description'].touched)">the field is required</span>
+    </div>
+    <div class="form-group mb-4">
+      <label class="form-label" for="location">Location</label>
+      <input id="location" class="form-control" formControlName="location" maxlength="100"
+             placeholder="Country, city, neighborhood, the office, my desk, etc..."/>
+      <span class="text-danger"
+            *ngIf="fControls['location'].hasError('required') && (fControls['location'].dirty
+          || fControls['location'].touched)">the field is required</span>
+    </div>
+    <div class="form-group mb-4">
+      <label class="form-label" for="categoryId">Category</label>
+      <select id="categoryId" class="form-control" formControlName="categoryId" >
+        <option [ngValue]="null" [disabled]="true" >Select</option>
+        <option [value]="item.id" *ngFor="let item of categories">{{item.name}}</option>
+      </select>
+      <span class="text-danger"
+            *ngIf="fControls['categoryId'].hasError('required') && (fControls['categoryId'].dirty
+          || fControls['categoryId'].touched)">the field is required</span>
+    </div>
+  </div>
+  <button type="submit" class="offer-submit-button btn btn-primary">Submit</button>
+</form>

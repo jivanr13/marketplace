@@ -1,0 +1,21 @@
+<nav aria-label="Page navigation example" *ngIf="paggin && paggin.Items">
+  <ul class="pagination justify-content-center">
+    <li class="page-item" *ngIf="paggin.PreviousPageIndex != null">
+      <a class="page-link" [routerLink]="" aria-label="Previous" (click)="previousPage()">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li *ngFor="let item of paggin.GetPreviousPageIndexes()" class="page-item">
+      <a class="page-link" [routerLink]="" (click)="navigate(item)">{{item}}</a>
+    </li>
+    <li class="page-item active"><a class="page-link" [routerLink]="">{{paggin.PageIndex}}</a></li>
+    <li *ngFor="let item of paggin.GetNextPageIndexes()" class="page-item">
+      <a class="page-link" [routerLink]="" (click)="navigate(item)">{{item}}</a>
+    </li>
+    <li class="page-item" *ngIf="paggin.NextPageIndex != null">
+      <a class="page-link" [routerLink]="" aria-label="Next" (click)="nextPage()">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>

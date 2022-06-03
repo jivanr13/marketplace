@@ -1,0 +1,22 @@
+.offer-card {
+  width: 29%;
+  margin: 10px 2%;
+  padding: 0;
+  border-radius: 10px;
+
+  @media (max-width: 992px) {
+    width: 45%;
+    margin: 10px 5px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 10px 5px;
+  }
+}
+.offer-init {
+  @media (min-width: 992px) {
+    min-width: 97%;
+    margin: 10px;
+  }
+}

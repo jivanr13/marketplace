@@ -1,0 +1,7 @@
+<div class="row">
+  <app-pagginator class="mt-4" *ngIf="listOffers" [listItems]="listOffers" [pageSize]="4" (changePage)="listOffersTemmp = $event"></app-pagginator>
+
+  <app-offer-item class="offer-card" [ngClass]="idx == 0 ? 'offer-init' : ''"
+                  *ngFor="let item of listOffersTemmp; let idx = index"
+                  [offer]="item" [idx]="idx"></app-offer-item>
+</div>

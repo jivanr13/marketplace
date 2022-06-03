@@ -1,0 +1,46 @@
+.offer-item {
+  height: 100%
+}
+.offer-img {
+  min-height: 350px;
+}
+
+@media (max-width: 768px) {
+  .offer-img-div {
+    max-height: 300px;
+  }
+  .offer-img {
+    max-width: 300px;
+    min-height: 300px;
+    height: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .offer-img-div {
+    max-height: 350px;
+  }
+  .offer-img {
+    max-width: 350px;
+    min-height: 350px;
+    height: auto;
+  }
+}
+
+
+.offer-header {
+  position: absolute;
+  display: block;
+  margin: 15px 0 0;
+  color: white;
+}
+
+.offer-footer {
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  color: white;
+  background-color: seagreen;
+  padding: 3px 15px;
+  border-radius: 0 0 10px;
+}

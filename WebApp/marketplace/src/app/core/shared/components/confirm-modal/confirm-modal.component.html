@@ -1,0 +1,11 @@
+<div class="alert-box">
+  <div class="confirm-modal-header">
+    <h2>{{title}}</h2>
+  </div>
+  <p class="confirm-modal-body">{{message}}</p>
+  <div class="confirm-modal-footer">
+    <button *ngIf="showButtonNo" (click)="onCancel()" class="btn btn-secondary col-auto me-auto btn-modal"
+            style="margin-right: 10px !important;">{{textButtonNo}}</button>
+    <button class="btn btn-primary col-auto btn-modal" (click)="onConfirm()">{{textButtonYes}}</button>
+  </div>
+</div>

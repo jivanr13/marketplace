@@ -1,0 +1,17 @@
+.alert-box {
+  margin: 2rem 1rem;
+  text-align: center;
+
+  .confirm-modal-header {
+    margin-bottom: 2rem;
+
+    h2 {
+      font-weight: bold !important;
+    }
+  }
+
+  .confirm-modal-body {
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+  }
+}

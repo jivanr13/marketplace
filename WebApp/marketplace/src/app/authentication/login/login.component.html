@@ -1,0 +1,24 @@
+<app-layout-login>
+  <div class="w-100 p-4 d-flex justify-content-center">
+    <div class="card card-flat">
+      <div class="card-body">
+        <p class="h4 text-center py-2">Welcome</p>
+        <form (submit)="submitForm()" [formGroup]="loginForm" class="form-validate mb-3" name="loginForm" novalidate
+              role="form">
+          <div class="mb-2">
+            <div class="input-group with-focus">
+              <label class="w-100 mb-0" for="user-name">UserName:</label>
+              <input autocomplete="off" class="form-control border-right-0" formControlName="userName" id="user-name"
+                     name="userName" placeholder="username" required="" type="text"/>
+            </div>
+            <div *ngIf="loginForm.get('userName').invalid && (loginForm.get('userName').touched
+                  || loginForm.get('userName').dirty)" class="text-danger">
+              <span *ngIf="loginForm.get('userName').hasError('required')">the field is required</span>
+            </div>
+          </div>
+          <button class="btn btn-block btn-primary mt-3" type="submit">login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</app-layout-login>

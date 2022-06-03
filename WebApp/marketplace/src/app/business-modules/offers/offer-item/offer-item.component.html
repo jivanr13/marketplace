@@ -1,0 +1,11 @@
+<div class="card mb-3 offer-item">
+  <div class="card-header offer-header bg-dark fs-4">{{offer.title}}</div>
+  <div class="offer-img-div text-center">
+    <img [src]="'assets/' + offer.pictureUrl" class="card-img-top mt-3 mb-3 offer-img" alt="...">
+  </div>
+  <div class="card-body">
+    <p class="card-text fst-italic"><small class="text-muted">{{offer.user}} {{offer.publishedOn | date:'MM/dd/yyyy d:mm a'}}</small></p>
+    <p class="card-text">{{offer.description}}</p>
+  </div>
+  <div class="card-footer offer-footer">{{offer.category}}</div>
+</div>
